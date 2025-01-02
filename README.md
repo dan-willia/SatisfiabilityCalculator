@@ -55,7 +55,6 @@ The statement is satisfied under the following conditions:
 {'p': True, 'q': True, 'r': True}
 {'p': False, 'q': False, 'r': False}
 ```
-
 ## Testing
 You can test the program by running different logical propositions as inputs. Some examples from Discrete Mathematics and Its Applications by Rosen are included in the code comments.
 
@@ -63,6 +62,9 @@ You can test the program by running different logical propositions as inputs. So
 Add support for additional logical operators (e.g., XOR, NAND, NOR).
 Implement a graphical user interface (GUI) for easier interaction.
 Optimize performance for large-scale logical expressions.
+
+## Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## Acknowledgments
 Inspired by the command-line calculator example in Programming: Principles and Practice Using C++ by Bjarne Stroustrup.
