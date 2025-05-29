@@ -10,9 +10,9 @@ on p. 113 of Rosen's Discrete Mathematics (7th Ed).
 
 I got the idea to use a recursive descent parser from Bjarne Stroustrup's walkthrough of
 a desktop calculator implementation in PPP 2nd Ed (Units 6, 7). I wrote the abstract
-grammar following Stroustrup's example (see Unit 6, Section 4 of PPP 2nd Ed). I then
-gave that to ChatGPT to generate the recursive descent parser in the parser.py file.
-Various small tweaks were needed to get the LLM-generated parser working properly. 
+grammar following Stroustrup's example (see Unit 6, Section 4 of PPP 2nd Ed; see parser.py for the grammar). I then
+gave that to ChatGPT to generate the recursive descent parser in parser.py.
+Various tweaks were needed to get the LLM-generated parser working properly. 
 For example, the clumsy way of dealing with variables by having the user pass them in 
 manually, which are then passed to the parser, is my own.
 
@@ -85,13 +85,13 @@ def main():
     print("Welcome to the satisfiability calculator.")
     print("Enter a proposition to see if and under what conditions it is satisfiable.")
     print("We support the following operators: 'v', '^', '~', '->', '<->', and letters for variables.")
-    # userExpression = input("Enter a proposition below:\n")
-    # print(f"You entered {userExpression}")
-    # userVariables = input("Enter the variables contained in your expression, separated by a space:\n")
-    # userVariables = userVariables.rsplit(" ")
+    userExpression = input("Enter a proposition below:\n")
+    print(f"You entered {userExpression}")
+    userVariables = input("Enter the variables contained in your expression, separated by a space:\n")
+    userVariables = userVariables.rsplit(" ")
     
-    userExpression = "(p v ~q) ^ (q v ~r) ^ (r v ~p)"
-    userVariables = ['p', 'q', 'r']
+    # userExpression = "(p v ~q) ^ (q v ~r) ^ (r v ~p)"
+    # userVariables = ['p', 'q', 'r']
 
     result = []
     tt = create_tt(userVariables)

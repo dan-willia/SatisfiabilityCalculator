@@ -1,4 +1,6 @@
-A command-line tool for determining satisfiability conditions in the propositional calculus.
+A command-line program for determining satisfiability conditions in the propositional calculus.
+
+sat_calc_for_logical_validity.ipynb is a walkthrough of sorts.
 
 This project was created in my free time during the first few weeks of CSPB2824 
 at the University of Colorado, Boulder, taught by Elizabeth Stade and Cailyn Craven,
