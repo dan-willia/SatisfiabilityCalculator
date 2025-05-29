@@ -72,6 +72,15 @@ def create_tt(vars: list[str]) -> list[dict[str: bool]]:
     result.append(dict(zip(vars, ta)))
   return result
 
+def evaluate(expr, truth_assignment):
+  """
+  Evaluates the expression based on the truth assignment.
+  """
+  tokens = tokenize(expr)
+  parser = Parser(tokens, truth_assignment)
+  result = parser.expression()
+  return result
+
 '''
 Using examples from p. 31, Rosen:
 
@@ -81,6 +90,7 @@ satisfiable when p q r have the same truth value.
 Entering (p v ~q) ^ (q v ~r) ^ (r v ~p) ^ (p v q v r) ^ (~p v ~q v ~r) yields the
 answer that the statement is not satisfiable.
 '''
+
 def main(): 
     print("Welcome to the satisfiability calculator.")
     print("Enter a proposition to see if and under what conditions it is satisfiable.")

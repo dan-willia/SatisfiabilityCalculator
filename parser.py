@@ -1,8 +1,6 @@
 '''
 See acknowledgements.
 
-The parse function will take a string and return a parse tree
-
 The grammar for the parser is the following:
   Expression
     Term
@@ -114,12 +112,3 @@ class Parser:
     else:
       raise ValueError(f"Unexpected token: {self.current_token()}")
     return node
-
-def evaluate(expr, truth_assignment):
-  """
-  Evaluates the expression based on the truth assignment.
-  """
-  tokens = tokenize(expr)
-  parser = Parser(tokens, truth_assignment)
-  result = parser.expression()
-  return result
